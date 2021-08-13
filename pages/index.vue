@@ -6,7 +6,7 @@
         class="button is-primary"
         @click="$eventBus.$emit('modal-triggered', 'newsletter-modal')"
       >
-        Subscribe To Newsletter
+        Subscribe To Holaaa
       </button>
     </site-hero>
     <main-section theme="one-column">
@@ -14,9 +14,7 @@
         <!-- All Posts -->
         <posts-grid />
       </template>
-      <template v-slot:sidebar>
-        Nothing here
-      </template>
+      <template v-slot:sidebar> Nothing here </template>
     </main-section>
     <news-letter-form-modal />
   </div>
@@ -31,18 +29,18 @@ export default {
   name: 'HomePage',
   head() {
     return {
-      title: `Home | ${this.$siteConfig.siteName}`
+      title: `Home | ${this.$siteConfig.siteName}`,
     }
   },
   components: {
-    NewsLetterFormModal
+    NewsLetterFormModal,
   },
   computed: {
-    ...mapState(['title', 'subtitle', 'featureImage'])
+    ...mapState(['title', 'subtitle', 'featureImage']),
   },
   fetch({ store, params }) {
     setPageData(store, { slug: 'home' })
-  }
+  },
 }
 </script>
 
